@@ -1,0 +1,43 @@
+@import 'screen_sizes';
+
+// Vuetify
+$btn-letter-spacing: 0 !important;
+$card-title-font-size: 0.9em !important;
+$card-title-line-height: 0.9em !important;
+
+// Colors
+$primary-color: #002147;
+$accent-color: #788bff;
+$secondary-color: #17c3b2;
+$text-color-dark: #ffffff;
+$text-color-light: #000000;
+$bg-dark: #ffffff;
+$bg-light: #000000;
+$bg-grey: #e6eaf0;
+$text-light-grey: #757575;
+$text-dark-grey: #2c2c2c;
+$maman-black: #333333;
+$maman-red: #eb3b5a;
+$almost-white: #f9f7f5;
+$main-bg: #f9f7f5;
+$main-background-bg: #f5f5f5;
+$side-color: #5758BB;
+
+// border-radius
+$main-border-radius: 7px;
+$sm-border-radius: 3px;
+$border-color: rgba(255, 255, 255, 0.12);
+$border-color-dark: rgba(0, 0, 0, 0.12);
+$divider-color: #e0e0e0;
+
+// Styling
+$spacing: 30px;
+$max-width: 1920px;
+
+// Shadow
+$subtle-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+$shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+$shadow-reverse: rgba(0, 0, 0, 0.3) 0px -4px 12px;
+
+// Font
+$body-font-family: IRANSans, serif;

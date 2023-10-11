@@ -1,0 +1,356 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+@import 'screen_sizes';
+@import 'shadow';
+
+*,
+*::after,
+*::before {
+  font-family: IRANSans, serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: IRANSans, serif !important;
+  font-weight: 300;
+  direction: rtl;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea {
+  font-family: IRANSans !important;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+ul,
+ol {
+  list-style-position: inside;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+::-moz-selection {
+  color: $almost-white;
+  background: $secondary-color;
+}
+
+::selection {
+  color: $almost-white;
+  background: $secondary-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+.row-container {
+  @include row-padding;
+}
+
+// Vue Carousel
+.VueCarousel-navigation {
+  button {
+    color: $maman-black;
+    position: relative;
+    top: 40% !important;
+    box-shadow: $subtle-shadow;
+    background-color: $bg-dark;
+    height: 80px;
+    width: 50px;
+    font-size: 25px;
+    color: $maman-black !important;
+
+    //&::before{
+    //  content: '';
+    //  position: absolute;
+    //  top: 0;
+    //  bottom: 0;
+    //  height: 80px;
+    //  width: 50px;
+    //}
+  }
+
+  button.VueCarousel-navigation-prev {
+    border-top-left-radius: $main-border-radius;
+    border-bottom-left-radius: $main-border-radius;
+    left: 0;
+  }
+
+  button.VueCarousel-navigation-next {
+    border-top-right-radius: $main-border-radius;
+    border-bottom-right-radius: $main-border-radius;
+    right: 0;
+  }
+}
+
+.carousel-container {
+  overflow: hidden;
+}
+
+.VueCarousel-dot-container {
+  margin: 0 !important;
+}
+
+.VueCarousel-wrapper {
+  min-height: 420px;
+  padding: 20px 10px;
+}
+
+.VueCarousel {
+  margin: 0 -10px;
+}
+
+.shrink {
+  flex-grow: 0 !important;
+  flex-shrink: 1 !important;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shadow {
+  box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.1),
+  0 2px 2px 0 rgba(0, 0, 0, 0.14),
+  0 1px 5px 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+.shadow-reverse {
+  box-shadow: $shadow-reverse;
+}
+
+.image-border {
+  border-radius: $main-border-radius;
+}
+
+.main-bg {
+  background-color: $main-bg !important;
+}
+
+.text-color-light {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.primary--text {
+  color: $primary-color !important;
+}
+
+.secondary--text {
+  color: $secondary-color !important;
+}
+
+// editor (WysWig)
+.editor {
+  height: 350px;
+  margin-bottom: 50px;
+
+  .quill-editor {
+    height: 90%;
+  }
+}
+
+//editor font-sizes
+.ql-size-huge {
+  font-size: 50px !important;
+  margin-bottom: 5px;
+  line-height: 60px;
+}
+
+.ql-size-large {
+  font-size: 20px !important;
+  line-height: 50px;
+}
+
+.ql-size-normal {
+  font-size: 20px !important;
+}
+
+.ql-size-small {
+  font-size: 15px !important;
+}
+
+// Scrollable v-card-text height
+.scrollable-height {
+  max-height: 80vh;
+}
+
+// For carousel image skeleton it doesnt work via props
+.v-skeleton-loader__image {
+  height: 350px !important;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.text--primary {
+  color: $primary-color !important;
+}
+
+.text--secondary {
+  color: $secondary-color !important;
+}
+
+span.highlight {
+  color: $primary-color;
+}
+
+// Vuetify input
+.v-text-field--outlined fieldset {
+  border-color: rgba(140, 140, 140, 0.4);
+}
+
+// Custom caption
+.custom-caption {
+  font-size: 0.8em;
+
+  &.lighter {
+    color: #c7c7c7;
+  }
+
+  &.darker {
+    color: #666666;
+  }
+
+  &.full-black {
+    color: #000000;
+  }
+
+  &.smaller {
+    font-size: 0.7em;
+  }
+}
+
+.custom-sub-caption {
+  font-size: 0.6em;
+  color: #aaaaaa;
+}
+
+// Modal
+.custom-modal {
+  border-top: 4px solid $primary-color !important;
+}
+
+.modal-title {
+  display: block;
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: $maman-black;
+}
+
+.modal-sub-title {
+  display: block;
+  font-size: 0.8em;
+  color: lighten($maman-black, 20%);
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+// Pretty paragraph
+.pretty-paragraph {
+  line-height: 1.97em;
+
+  &.smaller {
+    font-size: 0.9em;
+    line-height: 2.4em;
+  }
+}
+
+// Vuetify tab fix
+.v-tab {
+  letter-spacing: 0 !important;
+}
+
+// Vuetify navigation drawer fix
+.v-navigation-drawer--fixed {
+  z-index: 500 !important;
+}
+
+// Vuetify no border bottom filled input
+.no-bottom-border-input {
+  .v-input__slot::before {
+    border-style: unset !important;
+  }
+}
+
+// Remove scrollbar but keep functionality
+.remove-scrollbar-but-keep-functionality {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// English font
+.english-font {
+  font-family: Tahoma;
+}
+
+.subtle-text {
+  color: #aaaaaa;
+}
+
+.v-menu__content.theme--light.menuable__content__active {
+  z-index: 250 !important;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.title-with-dashed-border {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 15%;
+    height: 80%;
+    border-top: 2px dashed $primary-color;
+    border-right: 2px dashed $primary-color;
+    position: absolute;
+    top: -8px;
+    right: -15px;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 15%;
+    height: 80%;
+    border-bottom: 2px dashed $primary-color;
+    border-left: 2px dashed $primary-color;
+    position: absolute;
+    bottom: -8px;
+    left: -15px;
+  }
+}
+
+// Vuetify btn fix
+.v-btn {
+  letter-spacing: 0 !important;
+}

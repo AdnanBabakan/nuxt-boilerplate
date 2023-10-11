@@ -1,0 +1,14 @@
+@mixin row-padding {
+  padding: 0 17%;
+
+  @media (max-width: $sm-screen) {
+    padding: 5px 2% 0 2%;
+  }
+}
+
+@mixin custom-box {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: $main-border-radius;
+  box-shadow: $subtle-shadow;
+}
